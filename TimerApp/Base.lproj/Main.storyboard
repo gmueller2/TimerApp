@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUb-Pp-h8n" userLabel="BackgroundView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dio-8S-2cE" userLabel="Time Picker">
+                                <rect key="frame" x="37" y="318" width="320" height="216"/>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M6r-wV-I3m" userLabel="Bottom Stack">
+                                <rect key="frame" x="0.0" y="739.33333333333337" width="393" height="78.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfH-3h-9YU" userLabel="Start/Stop Button">
+                                        <rect key="frame" x="142" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-MC-Hxp" userLabel="Time Remaining">
+                                        <rect key="frame" x="133.33333333333334" y="44.333333333333258" width="126.33333333333334" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8nC-dB-elh" userLabel="Top Stack">
+                                <rect key="frame" x="0.0" y="69" width="393" height="33.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Live Clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQv-xO-fc2" userLabel="Live Clock">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8nC-dB-elh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Fdv-K0-fOs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8nC-dB-elh" secondAttribute="trailing" id="Lzh-zW-1B0"/>
+                            <constraint firstItem="M6r-wV-I3m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tzw-99-Mob"/>
+                            <constraint firstItem="WUb-Pp-h8n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UMs-u1-07Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M6r-wV-I3m" secondAttribute="trailing" id="WVz-Gy-5qP"/>
+                            <constraint firstItem="dio-8S-2cE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yqh-Gn-Og9"/>
+                            <constraint firstItem="dio-8S-2cE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGG-On-E2A"/>
+                            <constraint firstItem="WUb-Pp-h8n" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="cVa-Od-yu1"/>
+                            <constraint firstItem="8nC-dB-elh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iJH-8f-adx"/>
+                            <constraint firstAttribute="bottom" secondItem="WUb-Pp-h8n" secondAttribute="bottom" id="jpE-wo-yWP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M6r-wV-I3m" secondAttribute="bottom" id="oi1-nA-ZiT"/>
+                            <constraint firstItem="M6r-wV-I3m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ug3-A1-LBb"/>
+                            <constraint firstItem="WUb-Pp-h8n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w7Q-GO-Qf1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="lQv-xO-fc2" id="GX4-Hj-u4I"/>
+                        <outlet property="timePicker" destination="dio-8S-2cE" id="5Qs-Ii-bW8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-80.152671755725194" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
