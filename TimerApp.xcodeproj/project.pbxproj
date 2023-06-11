@@ -13,7 +13,7 @@
 		B06A4B8C2A35023700413F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06A4B8A2A35023700413F7A /* Main.storyboard */; };
 		B06A4B8E2A35023900413F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06A4B8D2A35023900413F7A /* Assets.xcassets */; };
 		B06A4B912A35023900413F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06A4B8F2A35023900413F7A /* LaunchScreen.storyboard */; };
-		B06A4B992A353EDD00413F7A /* audio_sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B06A4B982A353EDD00413F7A /* audio_sample.mp3 */; };
+		B0EDCE5F2A3547A0000E8FF7 /* audio_sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B0EDCE5E2A3547A0000E8FF7 /* audio_sample.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		B06A4B8D2A35023900413F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B06A4B902A35023900413F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B06A4B922A35023900413F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B06A4B982A353EDD00413F7A /* audio_sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = audio_sample.mp3; path = ../../../../Downloads/audio_sample.mp3; sourceTree = "<group>"; };
+		B0EDCE5E2A3547A0000E8FF7 /* audio_sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_sample.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				B06A4B8D2A35023900413F7A /* Assets.xcassets */,
 				B06A4B8F2A35023900413F7A /* LaunchScreen.storyboard */,
 				B06A4B922A35023900413F7A /* Info.plist */,
-				B06A4B982A353EDD00413F7A /* audio_sample.mp3 */,
+				B0EDCE5E2A3547A0000E8FF7 /* audio_sample.mp3 */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -129,8 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B06A4B912A35023900413F7A /* LaunchScreen.storyboard in Resources */,
+				B0EDCE5F2A3547A0000E8FF7 /* audio_sample.mp3 in Resources */,
 				B06A4B8E2A35023900413F7A /* Assets.xcassets in Resources */,
-				B06A4B992A353EDD00413F7A /* audio_sample.mp3 in Resources */,
 				B06A4B8C2A35023700413F7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
